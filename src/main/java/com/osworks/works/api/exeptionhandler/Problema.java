@@ -1,8 +1,7 @@
 package com.osworks.works.api.exeptionhandler;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
@@ -10,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class Problema {
 	
 	private Integer status;
-	private LocalDateTime dataHora;
+	//OffsetDateTime ja tem a ISO-86011 Spring mostra a data no padrão correto do sistema 
+	private OffsetDateTime dataHora;
 	private String titulo;
 	
 	//Execulta uma lista de campos com problemas de digitação do cliente.
@@ -49,10 +49,10 @@ public class Problema {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	public LocalDateTime getDataHora() {
+	public OffsetDateTime getDataHora() {
 		return dataHora;
 	}
-	public void setDataHora(LocalDateTime dataHora) {
+	public void setDataHora(OffsetDateTime dataHora) {
 		this.dataHora = dataHora;
 	}
 	public String getTitulo() {

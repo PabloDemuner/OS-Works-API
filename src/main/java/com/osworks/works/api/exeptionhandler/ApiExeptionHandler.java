@@ -1,5 +1,5 @@
 package com.osworks.works.api.exeptionhandler;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 
 import org.springframework.http.HttpStatus;
@@ -34,7 +34,7 @@ public class ApiExeptionHandler extends ResponseEntityExceptionHandler {
 		problema.setStatus(status.value());
 		problema.setTitulo("Um ou mais campos estão inválidos."
 				+ "Faça o preenchimento correto e tente novamente.");
-		problema.setDataHora(LocalDateTime.now());
+		problema.setDataHora(OffsetDateTime.now());
 		problema.setCampos(campos);
 		
 		return super.handleExceptionInternal (ex, problema, headers, status, request);

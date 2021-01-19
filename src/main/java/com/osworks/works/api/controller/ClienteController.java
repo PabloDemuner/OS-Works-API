@@ -52,8 +52,9 @@ public class ClienteController {
 	}
 	/*Metodo de cadastro do cliente
 	 * @Valid ativa a validação do campos */
-	@PostMapping
+	
 	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping
 	public Cliente adicionar(@Valid @RequestBody Cliente cliente) {
 		
 		return cadastroCliente.salvar(cliente);
