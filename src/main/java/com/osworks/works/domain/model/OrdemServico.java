@@ -2,6 +2,8 @@ package com.osworks.works.domain.model;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +12,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.osworks.works.api.model.Comentario;
 
 @Entity
 public class OrdemServico {
@@ -35,6 +40,11 @@ public class OrdemServico {
 	
 	private OffsetDateTime dataAbertura;
 	private OffsetDateTime dataFinalizacao;
+	
+	//Uma ordem de servico tem muitos comentarios.
+	@OneToMany(mappedBy = "ordemServico")
+	private List<Comentario> comentarios = new ArrayList<>();
+	
 	public Long getId() {
 		return id;
 	}
@@ -76,6 +86,14 @@ public class OrdemServico {
 	}
 	public void setDataFinalizacao(OffsetDateTime dataFinalizacao) {
 		this.dataFinalizacao = dataFinalizacao;
+	}
+	
+	
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
 	}
 	@Override
 	public int hashCode() {
