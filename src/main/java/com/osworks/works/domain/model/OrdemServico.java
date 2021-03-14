@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.springframework.web.server.ResponseStatusException;
+
 import com.osworks.works.api.model.Comentario;
 
 @Entity
@@ -118,6 +120,17 @@ public class OrdemServico {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public void finalizar() {
+		
+		if (!StatusOrdemServico.ABERTA.equals(getStatus())) {
+			throw new ResponseStatusException(null);
+		}
+		
+		setStatus(StatusOrdemServico.FINALIZADA);
+		setDataFinalizacao(OffsetDateTime.now());
+		
 	}
 	
 	
