@@ -69,7 +69,7 @@ public class OrdemServicoController {
 		return modelMapper.map(ordemServico, OrdemServicoModel.class);
 	}
 	
-	//Transforma uma List<OrdemServico> em uma List<OrdemServicoModel>
+	//Transforma uma List<OrdemServico> em uma List<OrdemServicoModel> 
 	private List<OrdemServicoModel> toCollectionModel(List<OrdemServico> ordensServico){
 		return ordensServico.stream()
 				.map(ordemServico -> toModel(ordemServico))

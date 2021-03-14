@@ -9,5 +9,4 @@ import com.osworks.works.domain.model.OrdemServico;
 public interface OrdemServicoRepository extends JpaRepository<OrdemServico, Long> {
 
 	
-	
 }

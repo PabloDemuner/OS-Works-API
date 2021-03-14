@@ -5,6 +5,8 @@ import java.time.OffsetDateTime;
 
 import com.osworks.works.domain.model.StatusOrdemServico;
 
+//Classe de modelo de representação das telas
+
 public class OrdemServicoModel {
 	
 	private Long id;
@@ -14,6 +16,7 @@ public class OrdemServicoModel {
 	private StatusOrdemServico status;
 	private OffsetDateTime dataAbertura;
 	private OffsetDateTime dataFinalizacao;
+	
 	public Long getId() {
 		return id;
 	}

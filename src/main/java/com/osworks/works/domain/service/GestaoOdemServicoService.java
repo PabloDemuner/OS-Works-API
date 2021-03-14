@@ -22,8 +22,10 @@ public class GestaoOdemServicoService {
 	@Autowired
 	private OrdemServicoRepository ordemServicoRepository;
 	
+	@Autowired
 	private ComentarioRepository comentarioRepository;
 	
+	@Autowired
 	private ClienteRepository clienteRepository;
 	
 	public OrdemServico criar (OrdemServico ordemServico) {
