@@ -27,3 +27,4 @@ Uma vez aberta o colaborador pode comentar, finalizar e cancelar a O.S aberta pa
 ## Implantação em produção
 
 - Banco de Dados: Mysql Workbench
+- Postman
