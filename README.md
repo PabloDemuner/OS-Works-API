@@ -28,3 +28,9 @@ Uma vez aberta o colaborador pode comentar, finalizar e cancelar a O.S aberta pa
 
 - Banco de Dados: Mysql Workbench
 - Postman
+
+## Autor
+
+Pablo Diego Demuner Costa
+
+LinkedIn: www.linkedin.com/in/pablo-diego-demuner-costa-31695b1b7
